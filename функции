@@ -1,0 +1,60 @@
+!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Функции</title>
+</head>
+<body>
+	<script>	
+function multiply(a, b){
+ return a * b
+}
+
+
+		
+		var ourFirstFunction = function () {
+ console.log("Привет, мир!");
+};
+		ourFirstFunction ();
+		var seyHelloTo = function (name) {
+			console.log ("привет , " + name + "!");
+		};
+		seyHelloTo("Алена");
+	
+		var printMultipleTimes = function (howManyTimes, whatToDraw) {
+			for (var i = 0; i < howManyTimes; i++) {
+				console.log (i + " " + whatToDraw);
+			}
+		};
+		printMultipleTimes (4, "=^_^=");
+
+		var double = function (number) {
+          return number * 2; 
+
+      };
+
+		double (3);
+
+		var peckRandomWord = function (words) {
+			return words [Math.floor (Math.random () * words.length)];
+		};
+		var randomWords = ["планета", "Червяк", "Цветок", "Компьютер"];
+		peckRandomWord (randomWords);
+		var pickRandomWord = function (words) {
+  return words[Math.floor(Math.random() * words.length)];
+};
+
+var randomBodyParts = ["Face", "Nose", "Hair"];
+var randomAdjectives = ["Smelly", "Boring", "Stupid"];
+var randomWords = ["Fly", "Marmot", "Stick", "Monkey", "Rat"];
+
+// Join all the random strings into a sentence:
+var randomString = "Your " + pickRandomWord(randomBodyParts) + " is like a " + pickRandomWord(randomAdjectives) + " " + pickRandomWord(randomWords) + "!!!";
+randomString;
+
+
+	</script>
+
+
+</body>
+</html>
