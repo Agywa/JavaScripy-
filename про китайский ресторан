@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="Utf-8">
+	<title>Про китайский ресторан</title>
+</head>
+<body>
+	<script>
+		var animals = ["Кот", "Рыба", "Лемур", "Комодский варан"]
+
+		for (var x = 1; x < animals.length; x++)
+		{
+			console.log (animals[x] +"- это прекрасное животное");
+		}
+	</script>
+</body>
