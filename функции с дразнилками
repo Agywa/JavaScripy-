@@ -1,0 +1,42 @@
+// Без этого работать не будет
+var pickRandomWord = function (words) {
+		return words [Math.floor(Math.random() * words.length)];
+
+
+
+
+// Генератор случайных дразнилок
+	
+	var randomBodyParts = ["глаз", "нос", "череп"];
+	var randomAdjectives = ["вонючая", "унылая", "дурацкая"];
+	var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
+
+// Выбираем случайной части тела из массива randomBodeParts
+
+	var randomBodyParts = randomBodyParts[Math.floor(Math.random () * 3)];
+// Выбираем случайного прилогательного из массива randomAdjectives
+	 
+	var randomAdjectives = randomAdjectives[Math.floor(Math.random () * 3)];
+// Выбираем случайные слова из массива randomWords:
+	
+	var randomWords = randomWords [Math.floor(Math.random () * 5)]
+// Соединяем случайные строки в предложение
+	
+	var randomInsult = "У тебя " + randomBodyParts + " словно " + randomAdjectives + " " + randomWords + "!!!";
+	randomInsult;
+
+
+// Делаем генератор дразнилок функцией 
+	 
+	var generateRandomInsult = function () {
+
+	var randomBodyParts = ["глаз", "нос", "череп"];
+	var randomAdjectives = ["вонючая", "унылая", "дурацкая"];
+	var randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
+
+// Соединяем случайные строки в предложение 
+ 	
+ 	var randomString = "У тебя " + pickRandomWord(randomBodyParts) + " словно " + pickRandomWord(randomAdjectives) + " " + pickRandomWord(randomWords) + "!!!";
+ 	return randomString;
+
+	};
