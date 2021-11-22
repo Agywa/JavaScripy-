@@ -1,0 +1,10 @@
+
+// 			УПРАЖНЕНИЯ
+// Математические расчеты и функции
+var add = function (a,b) {
+	return a+b;
+};
+var multiple = function (a,b){
+	return a*b;
+};
+add(multiple(36325, 9824), 777)
