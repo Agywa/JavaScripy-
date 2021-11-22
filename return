@@ -1,0 +1,9 @@
+
+// Рассмотриф return в функции
+
+	var fifthLetter = function (name) {
+		if (name.lengt < 5) {
+			return;
+		}
+		return "Пятая буква вашего имени: " + name[4] + ".";
+	};
