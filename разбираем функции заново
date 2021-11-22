@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Учим заново функции	</title>
+</head>
+<body>
+<script>
+	var ourFirstFunction = function () {
+		console.log ("Привет, мир")
+	};
+	ourFirstFunction ();
+	var sayHelloTo = function (name) {
+		console.log ("Привет, " + name + "!");
+	};
+	sayHelloTo("Ник");
+
+
+	var drawCats = function (howManyTimes) {
+		for (var i=0; i< howManyTimes; i++) {
+			console.log ( i + " =^-^=");
+		}
+	};
+	drawCats (5);
+
+
+	var printMultipleTimes = function (howManyTimes, whatToDraw) {
+		for (var i = 0; i<howManyTimes; i++) {
+			console.log (i + " " + whatToDraw);
+		}
+	};
+	printMultipleTimes (6, "=^-^=");
+	printMultipleTimes (2, "(<_>)")
+
+
+	var double = function (number) {
+		return number * 2;
+	};
+
+	var pickRandomWord = function (words) {
+		return words [Math.floor(Math.random() * words.length)];
+	};
+	var randomWords = ["Планета", "Червяк", "Цветок", "Компьютер"];
+	pickRandomWord (randomWords);
+
+
+
+	
+</script>
+
+
+</body>
+</html>
