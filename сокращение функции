@@ -1,0 +1,12 @@
+
+// сокращенные записи функций (функциональное выражение)
+
+	var double = function (number) {
+		return number * 2;
+	};
+
+// Короткая запись той же функции выглядит так(обьявление функции)
+	
+	function double(number) {
+		return number * 2;
+	};
