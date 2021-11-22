@@ -1,0 +1,3 @@
+// Другой вариант решения
+var multipleAdd = function (number1, number2, number3) {
+return number1 * number2 + number3};
