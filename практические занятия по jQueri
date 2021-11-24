@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Упражнения jQueri</title>
+</head>
+	<h1 id="main-heading">Привет, мир!</h1>
+
+<body>
+
+	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+	<script>
+
+		$("#main-heading").text("Мои друзья");
+
+
+ var friends = ["Jura", "Vadim", "Dima", "Ilia"];
+
+    for (var i = 0; i < friends.length; i++) {
+      $("body").append("<p>" + friends[i] + "</p>");
+      
+  		};
+  		 $("p").hide (0).fadeIn (3000);
+  		 $("p").append(" лучший!");
+
+// Мигающий заголовок 
+	var Time;
+	for (var i = 0; i<5; i++) {
+		Time = (i+1) * 1000;
+		$("#main-heading").fadeOut (Time/2).fadeIn (Time / 2);
+	};
+// пропали и через 3 секунды вернулись
+
+	$("p").fadeOut (1000) .delay(3000).fadeIn(5000);
+
+	</script>
+
+</body>
+</html>
