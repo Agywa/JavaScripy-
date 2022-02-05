@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {Counter} from "./Components/Counter/Counter";
+import {Settings} from "./Components/Settings/Settings";
+import {useDispatch, useSelector} from "react-redux";
+import {AppRootStateType} from "./Redux/Store";
+import {SetCounterToSettingsAC} from "./Redux/Reducer";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let counterToSettings = useSelector<AppRootStateType, boolean>(state => state.counter.counterToSettings)
+    const dispatch = useDispatch()
+
+    let [isSettingsInvalid, setIsSettingsInvalid] = useState(false);
+
+    const updateIsSettingsInvalid = (isSettingsInvalid: boolean) => {
+        setIsSettingsInvalid(isSettingsInvalid)
+    }
+
+    function changeCounterToSettings() {
+        dispatch(SetCounterToSettingsAC())
+    }
+
+    return (
+        <div className="App">
+            {counterToSettings && <Counter
+                isSettingsInvalid={isSettingsInvalid}
+                counterToSettings={changeCounterToSettings}
+            />}
+            {!counterToSettings && <Settings
+                setIsSettingsInvalidCallback={updateIsSettingsInvalid}
+            />}
+        </div>
+    );
 }
 
 export default App;
